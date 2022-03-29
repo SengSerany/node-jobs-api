@@ -1,21 +1,21 @@
 const getAllJobs = async (req, res) => {
-    req.send('get all jobs');
+    res.send('get all jobs');
 };
 
 const getJob = async (req, res) => {
-    req.send('get job');
+    res.send('get job');
 };
 
 const createJob = async (req, res) => {
-    req.send('create job');
+    res.send('create job');
 };
 
 const updateJob = async (req, res) => {
-    req.send('update jab');
+    res.send('update jab');
 };
 
 const deletejob = async (req, res) => {
-    req.send('delete job');
+    res.send('delete job');
 };
 
 module.exports = {
