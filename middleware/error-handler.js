@@ -18,6 +18,11 @@ let customError = {
     customError.statusCode = 400;
   }
 
+  if (err.name === "CastError") {
+    customError.msg = `No item found with id : ${Object.values(err.value)}`;
+    customError.statusCode = 404;
+  }
+
   if(err.code && err.code === 11000){
     customError.msg = `The ${Object.keys(err.keyValue)} is already used, choose an other one or connect to this one.`;
     customError.statusCode = 400;
